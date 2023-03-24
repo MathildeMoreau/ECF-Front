@@ -1,0 +1,148 @@
+@import '../../../styles.scss';
+
+@mixin texthover{
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  color: $main;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  top: 80%;
+  left: 50%;
+}
+
+.galerie-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .galerie-first-rank{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+
+    .plate-1{
+      background: url(../../assets/noodles.jpg);
+      @include images;
+      position: relative;
+      opacity: 1;
+      transition: 0.5s ease;
+
+      &:hover{
+        opacity: 0.3;
+
+        .middle{
+          opacity: 1;
+        }
+      }
+    }
+    .middle{
+    @include texthover;
+    }
+
+    .plate-2{
+      background: url(../../assets/images/salade.jpg);
+      @include images;
+      position: relative;
+      opacity: 1;
+      transition: 0.5s ease;
+
+      &:hover{
+        opacity: 0.3;
+
+        .middle{
+          opacity: 1;
+        }
+      }
+
+      .middle{
+        @include texthover;
+        }
+    }
+
+    .plate-3{
+      background: url(../../assets/images/saumon.jpg);
+      @include images;
+      position: relative;
+      opacity: 1;
+      transition: 0.5s ease;
+
+      &:hover{
+        opacity: 0.3;
+
+        .middle{
+          opacity: 1;
+        }
+      }
+      .middle{
+        @include texthover;
+        }
+    }
+  }
+      .galerie-second-rank{
+        display: flex;
+        justify-content: space-evenly;
+
+        .plate-4{
+          background: url(../../assets/images/huitres.jpg);
+          @include images;
+          position: relative;
+          opacity: 1;
+          transition: 0.5s ease;
+    
+          &:hover{
+            opacity: 0.3;
+    
+            .middle{
+              opacity: 1;
+            }
+          }
+          .middle{
+            @include texthover;
+            }
+        }
+        .plate-5{
+          background: url(../../assets/images/fondue-savoyarde.jpg);
+          @include images;
+          position: relative;
+          opacity: 1;
+          transition: 0.5s ease;
+    
+          &:hover{
+            opacity: 0.3;
+    
+            .middle{
+              opacity: 1;
+            }
+          }
+          .middle{
+            @include texthover;
+            }
+        }
+        .plate-6{
+          background: url(../../assets/images/oeufs.jpg);
+          @include images;
+          position: relative;
+          opacity: 1;
+          transition: 0.5s ease;
+    
+          &:hover{
+            opacity: 0.3;
+    
+            .middle{
+              opacity: 1;
+            }
+          }
+          .middle{
+            @include texthover;
+            }
+        }
+  
+      }
+      .reservation-button{
+        @include buttons;
+        padding: 18px 23px;
+        margin-top: 50px;
+      }
+}

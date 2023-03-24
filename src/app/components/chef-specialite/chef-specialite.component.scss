@@ -1,0 +1,17 @@
+.specialite-container{
+  display: flex;
+
+  .image-plat-container{
+    width: 150px;
+    height: 150px;
+    
+    .image-plat{
+      background: url('../../assets/images/parmentier.jpg');
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}

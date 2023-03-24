@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;500&display=swap');
+
+$white : #F9F6F1;
+$blue: #1B1B37;
+$text: #1F1F1F;
+$main: #780010;
+
+@mixin buttons {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: none;
+  background: $main;
+  color: $white;
+  border-radius: 5px;
+}
+
+@mixin images {
+  background-position: center;
+  background-size: cover;
+  width: 430px;
+  height: 370px;
+  margin: 10px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: $white;
+}
+
+h1{
+  color: $white;
+}
+
+h2{
+  text-align: center;
+  color: $main;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}

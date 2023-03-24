@@ -1,0 +1,30 @@
+<div *ngFor="let personnel of newEmployees">
+  <p><span>{{personnel.id}}</span> <span>{{personnel.nom}}</span></p>
+  
+</div>
+
+<form #employeeForm="ngForm" action="" (ngSubmit)="onSave(employeeForm.value)">
+  <div>
+    <label for="employeeId">Id : </label>
+    <input type="text" name="id" id="id" disabled ngModel>
+  </div>
+  <div>
+    <label for="employeeName">Nom : </label>
+    <input type="text" name="nom" id="nom" ngModel>
+    <label for="employeeFirstName">Prénom : </label>
+    <input type="text" name="prenom" id="prenom" ngModel>
+  </div>
+  <div>
+    <label for="employeeMail">Adresse e-mail : </label>
+    <input type="text" name="email" id="email" ngModel>
+    <label for="employeePassword">Mot de passe : </label>
+    <input type="password" name="password" id="password" ngModel>
+  </div>
+  <div>
+    <label for="employeeRole">Role : </label>
+    <input type="text" name="role" id="role" ngModel>
+    <label for="employeeAdmin">Admin ? </label>
+    <input type="number" name="admin" id="admin" ngModel>
+  </div>
+  <button type="submit">Valider</button>
+</form>
