@@ -32,6 +32,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { CarteElementComponent } from './components/carte-element/carte-element.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MenuElementComponent } from './components/menu-element/menu-element.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { MenuElementComponent } from './components/menu-element/menu-element.com
     DatepickerInlineCalendarExampleComponent,
     CarteElementComponent,
     MenuPageComponent,
-    MenuElementComponent
+    MenuElementComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

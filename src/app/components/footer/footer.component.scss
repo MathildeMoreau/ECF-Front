@@ -53,6 +53,15 @@
           font-weight: 300;
           text-transform: uppercase;
           font-size: 20px;
+
+          a{
+            color: $white;
+            text-decoration: none;
+
+            &:visited{
+              color: $white;
+            }
+          }
         }
       }
     }

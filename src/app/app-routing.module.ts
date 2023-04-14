@@ -6,6 +6,7 @@ import { CartePageComponent } from './pages/carte-page/carte-page.component';
 import { ConnexionPageComponent } from './pages/connexion-page/connexion-page.component';
 import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'menus',
     component: MenuPageComponent
+  },
+  {
+    path: 'contact',
+    component: ContactPageComponent
   },
   {
     path: '*',

@@ -1,0 +1,38 @@
+@import '../../../styles.scss';
+
+h2{
+  color: $text;
+}
+
+.coordonnees{
+  display: flex;
+  justify-content: space-around;
+
+  form{
+    display: flex;
+    flex-direction: column;
+
+    input{
+      border: 0;
+      border-bottom: 1px solid $main;
+      margin: 20px;
+      padding: 20px 150px;
+      background: $white;
+
+      &::placeholder{
+        color: $text;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        text-align: left;
+      }
+    }
+
+    button{
+      @include buttons;
+      margin-top: 50px;
+      padding: 20px 0;
+    }
+  }
+}
