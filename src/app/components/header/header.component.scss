@@ -1,0 +1,69 @@
+@import '../../../styles.scss';
+.container{
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .menu-open{
+    width: 100%;
+  }
+  
+  #header-homepage{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background: transparent;
+
+
+  .top-elements-homepage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    #logo-quai-antiques{
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      z-index: 50;
+      letter-spacing: 10px;
+      color: $text;
+      text-decoration: none;
+
+      &:visited{
+        text-decoration: none;
+        color: $text;
+      }
+    }
+
+    .toggleMenu{
+      @include buttons;
+      background: none;
+      display: flex;
+      align-items: center;
+      color: $text;
+      
+      .menu-hamburger-image{
+        width: 40px;
+        padding-right: 20px;
+      }
+    }
+    
+    .connexion-button{
+      @include buttons;
+      padding: 18px 23px;
+      width: auto;
+      text-decoration: none;
+
+      &:visited{
+        text-decoration: none;
+        color: $white;
+      }
+    }
+    
+  }
+  
+}
+}

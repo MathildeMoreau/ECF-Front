@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="menu-open" *ngIf="isMenuOpened">
+    <app-navigation />
+  </div>
+  <div id="header-homepage">
+    <div class="top-elements-homepage">
+      <button class="toggleMenu" (click)="toggleMenu()" >
+        <img src="../../assets/hamburger.png" class="menu-hamburger-image">
+        {{isMenuOpened ? 'X' : 'Menu'}}
+      </button>
+      <a routerLink="/home" id="logo-quai-antiques">Quai Antiques</a>
+      <a class="connexion-button" routerLink="/connexion">Se connecter</a>
+    </div>
+  </div>
+</div>

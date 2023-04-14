@@ -1,0 +1,11 @@
+@import '../../../styles.scss';
+
+mat-card{
+  background: $white;
+  align-items: center;
+  box-shadow: none;
+  
+  mat-calendar{
+    width: 70%;
+  }
+}

@@ -1,17 +1,6 @@
-<div class="container">
-  <div class="menu-open" *ngIf="isMenuOpened">
-    <app-navigation />
-  </div>
-  <div id="header-homepage">
-    <div class="top-elements-homepage">
-      <button class="toggleMenu" (click)="toggleMenu()" >
-        <img src="../../assets/hamburger.png" class="menu-hamburger-image">
-        {{isMenuOpened ? 'X' : 'Menu'}}
-      </button>
-      <h1>Quai Antiques</h1>
-      <button class="connexion-button">Se connecter</button>
-    </div>
-  </div>
+<div class="homepage-header">
+  <app-header [ngStyle]="{'color' : 'white'} "></app-header>
 </div>
 <app-galerie></app-galerie>
 <app-chef-specialite></app-chef-specialite>
+<app-footer></app-footer>

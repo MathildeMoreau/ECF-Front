@@ -1,0 +1,19 @@
+<app-header></app-header>
+<h2>Reserver une table</h2>
+<form action="">
+  <div class="nb-personnes">
+    <h3>Nombre de couverts</h3>
+    <input type="number" min="1" max="6" [defaultValue]="1">
+    <p>(Maximum 6 personnes, au dela nous contacter)</p>
+  </div>
+  <div class="date-container">
+    <h3>Date et heure</h3>
+    <app-datepicker-inline-calendar-example></app-datepicker-inline-calendar-example>
+  </div>
+  <div class="allergies">
+    <h3>Allergies</h3>
+    <input type="text" placeholder="Indiquez ici les éventuelles allergies pour vous et vos convives">
+  </div>
+  <button type="submit" class="validation-button">Valider la réservation</button>
+</form>
+<app-footer></app-footer>

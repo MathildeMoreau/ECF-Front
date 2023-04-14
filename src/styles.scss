@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Playfair+Display&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,300;0,500;1,200&display=swap');
 $white : #F9F6F1;
 $blue: #1B1B37;
 $text: #1F1F1F;
@@ -16,6 +15,8 @@ $main: #780010;
   background: $main;
   color: $white;
   border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 @mixin images {
@@ -24,6 +25,22 @@ $main: #780010;
   width: 430px;
   height: 370px;
   margin: 10px;
+}
+
+@mixin itemsText{
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  letter-spacing: 10px;
+  color: $text;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+@mixin titresPlats{
+  font-family: 'Ms Madi', cursive;
+  font-size: 38px;
+  text-align: center;
 }
 
 body{
@@ -46,4 +63,38 @@ h2{
   letter-spacing: 20px;
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-calendar-body-selected{
+  background: $main;
+  color: $white !important;
+}
+
+.mat-calendar-body-cell{
+  width: 10%;
+  height: 10%;
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+  background: #78001079;
+}
+
+.mat-calendar-body-cell{
+  width: 10% !important;
+  height: 10% !important;
+  padding: 20px 50px;
+  
+}
+
+.mat-calendar-body-cell-content{
+  border: 2px solid $main;
+  color: $main;
+  width: 10%;
+  border-radius: 10px !important;
 }

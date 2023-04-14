@@ -1,0 +1,52 @@
+@import '../../../styles.scss';
+.container{
+  display: flex;
+
+  .menu-open{
+    width: 100%;
+  }
+  
+  #header-homepage{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background: rgba(255, 255, 255, 0.30);
+
+  .top-elements-homepage{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    h1{
+      font-family: 'Playfair Display', serif;
+      font-size: 50px;
+      z-index: 50;
+      letter-spacing: 10px;
+    }
+
+    .toggleMenu{
+      @include buttons;
+      background: none;
+      display: flex;
+      align-items: center;
+      
+      .menu-hamburger-image{
+        width: 40px;
+        padding-right: 20px;
+      }
+    }
+    
+    .connexion-button{
+      @include buttons;
+      padding: 18px 23px;
+      width: auto;
+      height: 60px;
+    }
+    
+  }
+  
+}
+}
