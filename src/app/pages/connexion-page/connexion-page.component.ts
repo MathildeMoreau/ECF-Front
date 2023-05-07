@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connexion-page',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ConnexionPageComponent {
 
+  constructor(
+    private router : Router
+  ){
+
+  }
+
+  public goToAdminPanel(): void{
+    this.router.navigateByUrl('http://quai-antiques.studiomdev.fr/admin');
+  }
 }

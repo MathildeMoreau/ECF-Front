@@ -2,36 +2,16 @@
 
 <div class="galerie-container">
   <div class="galerie-first-rank">
-    <div class="plate-1 plates">
+    <div class="plates" [style.background-image]="'url(quai-antiques/public/upload/images/' + result.photo + ')'" *ngFor="let result of platsList | slice:0:3">
       <div class="middle">
-        Titre 1
-      </div>
-    </div>
-    <div class="plate-2 plates">
-      <div class="middle">
-        Titre 1
-      </div>
-    </div>
-    <div class="plate-3 plates">
-      <div class="middle">
-        Titre 1
+        {{result.titre_photo}}
       </div>
     </div>
   </div>
   <div class="galerie-second-rank">
-    <div class="plate-4 plates">
+    <div class="plates" [style.background-image]="'url(quai-antiques/public/upload/images/' + result.photo + ')'" *ngFor="let result of platsList | slice:3:6">
       <div class="middle">
-        Titre 1
-      </div>
-    </div>
-    <div class="plate-5 plates">
-      <div class="middle">
-        Titre 1
-      </div>
-    </div>
-    <div class="plate-6 plates">
-      <div class="middle">
-        Titre 1
+        {{result.titre_photo}}
       </div>
     </div>
   </div>

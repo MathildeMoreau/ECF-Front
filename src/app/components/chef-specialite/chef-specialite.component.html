@@ -1,13 +1,13 @@
 <h2>Spécialité du chef</h2>
-<div class="specialite-container">
+<div class="specialite-container" *ngFor="let result of platsList">
   <div class="image-plat-container">
-    <div class="image-plat"></div>
+    <div class="image-plat" [style.background-image]="'url(quai-antiques/public/upload/images/' + result.photo + ')'"></div>
   </div>
-  <div class="description-plat">
-    <h3 class="plat-titre">Le parmentier de canard</h3>
-    <p class="plat-description">Canard confit, jus truffé et croûte de comté</p>
+  <div class="description-plat" *ngIf="result.isSpecialite">
+    <h3 class="plat-titre">{{result.nom}}</h3>
+    <p class="plat-description">{{result.description}}</p>
   </div>
-  <div class="tarif-plat">35.00€</div>
+  <div class="tarif-plat">{{result.prix / 100 | currency:'EUR':'symbol' }}</div>
 </div>
 <div class="button-container">
   <a class="carte-button" routerLink="/carte">Voir la carte</a>

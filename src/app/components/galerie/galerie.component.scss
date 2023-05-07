@@ -22,8 +22,7 @@
     justify-content: space-evenly;
     padding-bottom: 10px;
 
-    .plate-1{
-      background: url(/assets/noodles.jpg);
+    .plates{
       @include images;
       position: relative;
       opacity: 1;
@@ -40,51 +39,12 @@
     .middle{
     @include texthover;
     }
-
-    .plate-2{
-      background: url(/assets/salade.jpg);
-      @include images;
-      position: relative;
-      opacity: 1;
-      transition: 0.5s ease;
-
-      &:hover{
-        opacity: 0.3;
-
-        .middle{
-          opacity: 1;
-        }
-      }
-
-      .middle{
-        @include texthover;
-        }
-    }
-
-    .plate-3{
-      background: url(/assets/saumon.jpg);
-      @include images;
-      position: relative;
-      opacity: 1;
-      transition: 0.5s ease;
-
-      &:hover{
-        opacity: 0.3;
-
-        .middle{
-          opacity: 1;
-        }
-      }
-      .middle{
-        @include texthover;
-        }
-    }
   }
       .galerie-second-rank{
         display: flex;
         justify-content: space-evenly;
 
-        .plate-4{
+        .plates{
           background: url(/assets/huitres.jpg);
           @include images;
           position: relative;
@@ -101,44 +61,7 @@
           .middle{
             @include texthover;
             }
-        }
-        .plate-5{
-          background: url(/assets/fondue-savoyarde.jpg);
-          @include images;
-          position: relative;
-          opacity: 1;
-          transition: 0.5s ease;
-    
-          &:hover{
-            opacity: 0.3;
-    
-            .middle{
-              opacity: 1;
-            }
-          }
-          .middle{
-            @include texthover;
-            }
-        }
-        .plate-6{
-          background: url(/assets/oeufs.jpg);
-          @include images;
-          position: relative;
-          opacity: 1;
-          transition: 0.5s ease;
-    
-          &:hover{
-            opacity: 0.3;
-    
-            .middle{
-              opacity: 1;
-            }
-          }
-          .middle{
-            @include texthover;
-            }
-        }
-  
+        }  
       }
       .reservation-button{
         @include buttons;

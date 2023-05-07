@@ -43,7 +43,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: HomepageComponent
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 
