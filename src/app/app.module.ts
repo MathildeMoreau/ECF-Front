@@ -33,6 +33,7 @@ import { CarteElementComponent } from './components/carte-element/carte-element.
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MenuElementComponent } from './components/menu-element/menu-element.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ReservationAcceptedComponent } from './pages/reservation-accepted/reservation-accepted.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     CarteElementComponent,
     MenuPageComponent,
     MenuElementComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ReservationAcceptedComponent
   ],
   imports: [
     BrowserModule,

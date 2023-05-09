@@ -1,9 +1,7 @@
 <app-header></app-header>
 <h2>Menus</h2>
 <ul>
-  <li>Menu découverte</li>
-  <li>Menu saveurs</li>
-  <li>Menu étoilé</li>
+  <li *ngFor="let menu of menusList">{{menu.nom}}</li>
 </ul>
 <app-menu-element></app-menu-element>
 <app-footer></app-footer>

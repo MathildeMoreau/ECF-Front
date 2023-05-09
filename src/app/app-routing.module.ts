@@ -7,6 +7,7 @@ import { ConnexionPageComponent } from './pages/connexion-page/connexion-page.co
 import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ReservationAcceptedComponent } from './pages/reservation-accepted/reservation-accepted.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactPageComponent
+  },
+  {
+    path: 'reservation/:id',
+    component: ReservationAcceptedComponent
   },
   {
     path: '*',

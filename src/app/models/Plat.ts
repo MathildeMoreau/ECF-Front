@@ -6,7 +6,7 @@ export interface Plat{
   titre_photo: string
   prix: number
   add_date: Date
-  categorie_id : number
+  categorie : number
   isSpecialite : boolean
   isVegan : boolean
 }

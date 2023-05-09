@@ -62,6 +62,23 @@ form{
     }
   }
 
+  .reservation-infos{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    input{
+      border: $main solid 1px;
+      border-radius: 10px;
+      width: 400px;
+      height: 40px;
+      color: $main;
+      background: $white;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+
   .validation-button{
     @include buttons;
     padding: 18px 23px;

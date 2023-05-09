@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from 'src/app/models/Menu';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-menu-element',
@@ -7,36 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuElementComponent implements OnInit{
 
-  menuTitle !: string;
-  entree1 !: string;
-  descEntree1 !: string;
+  menusList !: Menu[];
 
-  entree2 !: string;
-  descEntree2 !: string;
+  constructor(
+    private _menuService: MenuService
+  ){
 
-  platTitle1 !: string;
-  descPlat1 !: string;
-
-  platTitle2 !: string;
-
-  dessert1 !: string;
-  descDessert1 !: string;
-
-  dessert2 !: string;
-
-  price !: number;
+  }
 
 
   ngOnInit(): void {
-    this.menuTitle = "Menu Découverte";
-    this.entree1 = "Foie gras de canard";
-    this.descEntree1 = "Gelée de Mandarines et Safran, Briochine aux Fruits Confits";
-    this.platTitle1 = "Filet de Caille Rôtie";
-    this.descPlat1 = "Légumes Anciens et Pralin de Graines, Jus de Poulet";
-    this.dessert1 = "Tiramisu";
-    this.descDessert1 = "Café, Cognac et Vanille de Madagascar";
-
-    this.price = 70;
+    this._menuService.getMenus().subscribe(
+      menu => this.menusList = menu
+    )
   }
 
 }

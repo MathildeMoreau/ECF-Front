@@ -1,0 +1,20 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+ul li {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+ul li img {
+  margin-right: 20px;
+}
+
+.notes-container {
+  margin-top: 50px;
+}/*# sourceMappingURL=carte-categories.component.css.map */

@@ -3,8 +3,11 @@
 </app-header>
 <h2>A la carte</h2>
 <app-carte-categories></app-carte-categories>
-<app-carte-element></app-carte-element>
-<app-carte-element></app-carte-element>
-<app-carte-element></app-carte-element>
-<app-carte-element></app-carte-element>
+<div *ngFor="let category of categoriesList" class="carte-element-container">
+  <h3>{{category.nom}}</h3>
+  <div *ngFor="let dish of category.plats">
+    <p>{{dish}}</p>
+  </div>
+</div>
+
 <app-footer></app-footer>

@@ -1,0 +1,161 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Playfair+Display&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,300;0,500;1,200&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #F9F6F1;
+}
+
+h1 {
+  color: #F9F6F1;
+}
+
+h2 {
+  text-align: center;
+  color: #780010;
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-calendar-body-selected {
+  background: #780010;
+  color: #F9F6F1 !important;
+}
+
+.mat-calendar-body-cell {
+  width: 10%;
+  height: 10%;
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background: rgba(120, 0, 16, 0.4745098039);
+}
+
+.mat-calendar-body-cell {
+  width: 10% !important;
+  height: 10% !important;
+  padding: 20px 50px;
+}
+
+.mat-calendar-body-cell-content {
+  border: 2px solid #780010;
+  color: #780010;
+  width: 10%;
+  border-radius: 10px !important;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  letter-spacing: 10px;
+  color: #1F1F1F;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  letter-spacing: 10px;
+  color: #1F1F1F;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+form .nb-personnes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form .nb-personnes input {
+  border: #780010 solid 1px;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+  color: #780010;
+  font-size: 22px;
+  text-align: center;
+}
+form .nb-personnes p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  font-style: italic;
+}
+form .date-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+form .allergies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form .allergies input {
+  width: 900px;
+  height: 100px;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  border: #780010 solid 1px;
+  border-radius: 10px;
+  background: #F9F6F1;
+}
+form .reservation-infos {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+form .reservation-infos input {
+  border: #780010 solid 1px;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+  color: #780010;
+  background: #F9F6F1;
+  font-size: 22px;
+  text-align: center;
+}
+form .validation-button {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: none;
+  background: #780010;
+  color: #F9F6F1;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 18px 23px;
+  margin-top: 50px;
+}/*# sourceMappingURL=reservation-page.component.css.map */

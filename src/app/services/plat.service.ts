@@ -30,6 +30,12 @@ export class PlatService {
     )
   }
 
+  getPlatById(platId: string): Observable<Plat>{
+    return this._http.get<Plat>(`https://quai-antiques.studiomdev.fr${platId}`).pipe(
+      tap(res => console.log(res))
+    )
+  }
+
   postPlat(plat:any) :Observable<Plat>{
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(plat);

@@ -1,18 +1,21 @@
-<div class="title">
-  <h3>{{menuTitle}}</h3>
-  <h4>{{price}}.00 €</h4>
-</div>
-<div class="menu-choices">
-  <h5>{{entree1}}</h5>
-  <p>{{descEntree1}}</p>
-  <div class="separator">
-    **********
+<div *ngFor="let menu of menusList">
+  <div class="title">
+    <h3>{{menu.nom}}</h3>
+    <h4>{{menu.prix | currency:'EUR'}}</h4>
   </div>
-  <h5>{{platTitle1}}</h5>
-  <p>{{descPlat1}}</p>
-  <div class="separator">
-    **********
+
+  <div class="menu-choices">
+    <h5>Entrée</h5>
+    <p>Description</p>
+    <div class="separator">
+      **********
+    </div>
+    <h5>Plat</h5>
+    <p>Description</p>
+    <div class="separator">
+      **********
+    </div>
+    <h5>Dessert</h5>
+    <p>Description</p>
   </div>
-  <h5>{{dessert1}}</h5>
-  <p>{{descDessert1}}</p>
 </div>

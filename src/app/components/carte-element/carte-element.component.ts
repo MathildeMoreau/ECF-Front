@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Categorie } from 'src/app/models/Categorie';
+import { Plat } from 'src/app/models/Plat';
+import { CategorieService } from 'src/app/services/categorie.service';
+import { PlatService } from 'src/app/services/plat.service';
 
 @Component({
   selector: 'app-carte-element',
@@ -7,20 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarteElementComponent implements OnInit{
 
-  titleCategory!: string;
-  titleDish!: string;
-  description!: string;
-  price!: number;
-  isSpecialite!: boolean;
-  isVegan !: boolean;
+  platsList !: Plat[];
+  PlatByCategorie !: Plat;
+  @Input() apiPathToDish !: string;
+
+  constructor(
+    private _platService: PlatService
+  ){
+
+  }
 
   ngOnInit(): void {
-    this.titleCategory = "Amuses-bouches";
-    this.titleDish = "Millefeuilles de légumes";
-    this.description = "Fenouil, navet, potimarron et épinards";
-    this.price = 8;
-    this.isSpecialite = true;
-    this.isVegan = false;
+    this._platService.getPlats()
+    .subscribe(plat => this.platsList = plat)
+    console.log(this.apiPathToDish);
+
+    this._platService.getPlatById(this.apiPathToDish)
+      .subscribe(plat => this.PlatByCategorie = plat)
   }
+
 
 }

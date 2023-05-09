@@ -1,16 +1,15 @@
 <div class="carte-element-container">
-  <h3>{{titleCategory}}</h3>
-  
-  <div class="plat-container">
-    <span *ngIf="isSpecialite"><img src="/assets/chef-hat.png" alt=""></span>
-    <span *ngIf="isVegan"><img src="/assets/natural-food.png" alt=""></span>
+  <div class="plat-container" *ngFor="let plat of platsList">
+    <span *ngIf="plat.isSpecialite"><img src="/assets/chef-hat.png" alt=""></span>
+    <span *ngIf="plat.isVegan"><img src="/assets/natural-food.png" alt=""></span>
     <div class="plat-elements">
       <div class="plat-texte">
-        <h4>{{titleDish}}</h4>
-        <p>{{description}}</p>
+        <p>{{PlatByCategorie}}</p>
+        <h4>{{plat.nom}}</h4>
+        <p>{{plat.description}}</p>
       </div>
       <div class="plat-price">
-        <h5>{{price}}.00€</h5>
+        <h5>{{plat.prix / 100 | currency:'EUR'}}</h5>
       </div>
     </div>
   </div>

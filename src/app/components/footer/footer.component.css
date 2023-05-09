@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Playfair+Display&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,300;0,500;1,200&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #F9F6F1;
+}
+
+h1 {
+  color: #F9F6F1;
+}
+
+h2 {
+  text-align: center;
+  color: #780010;
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-calendar-body-selected {
+  background: #780010;
+  color: #F9F6F1 !important;
+}
+
+.mat-calendar-body-cell {
+  width: 10%;
+  height: 10%;
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  background: rgba(120, 0, 16, 0.4745098039);
+}
+
+.mat-calendar-body-cell {
+  width: 10% !important;
+  height: 10% !important;
+  padding: 20px 50px;
+}
+
+.mat-calendar-body-cell-content {
+  border: 2px solid #780010;
+  color: #780010;
+  width: 10%;
+  border-radius: 10px !important;
+}
+
+.footer-container {
+  margin-top: 100px;
+  background: #1B1B37;
+  color: #F9F6F1;
+  padding: 20px 0 50px 0;
+}
+.footer-container .border-1 {
+  border: 1px solid #F9F6F1;
+  padding-bottom: 20px;
+  margin: 10px;
+}
+.footer-container .border-1 .border-2 {
+  border: 1px solid #F9F6F1;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px -10px -10px -10px;
+  padding: 30px;
+}
+.footer-container .border-1 .border-2 .footer-title {
+  font-family: "Playfair Display", sans-serif;
+  letter-spacing: 10px;
+  font-size: 50px;
+}
+.footer-container .border-1 .border-2 .footer-title h4 {
+  margin: 20px 0;
+}
+.footer-container .border-1 .border-2 .footer-title p {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+.footer-container .border-1 .border-2 .footer-title .sem-hours {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-container .border-1 .border-2 .footer-menu ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer-container .border-1 .border-2 .footer-menu ul li {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.footer-container .border-1 .border-2 .footer-menu ul li a {
+  color: #F9F6F1;
+  text-decoration: none;
+}
+.footer-container .border-1 .border-2 .footer-menu ul li a:visited {
+  color: #F9F6F1;
+}
+.footer-container .border-1 .border-2 .footer-infos {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=footer.component.css.map */
