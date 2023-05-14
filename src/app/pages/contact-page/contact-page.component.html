@@ -1,11 +1,12 @@
 <app-header></app-header>
 <h2>Contact</h2>
 <div class="coordonnees">
-  <form action="">
-    <input type="text" id="nom" name="nom" placeholder="nom">
-    <input type="tel" id="telephone" name="telephone" placeholder="Téléphone">
-    <input type="text" id="message" name="message" placeholder="message">
-    <button type="submit">Envoyer</button>
+  <form action="https://formsubmit.co/contact@quai-antiques.studiomdev.fr" method="POST" #contactForm="ngForm">
+    <input type="text" id="nom" name="nom" id="nom" placeholder="nom" required ngModel>
+    <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" ngModel>
+    <input type="email" id="email" name="email" placeholder="Email" ngModel>
+    <input type="text" id="message" name="message" placeholder="message" required ngModel>
+    <button type="submit" (click)="sendForm('Message envoyé 😃', contactForm.value)">Envoyer</button>
   </form>
   <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2800.8542146781037!2d6.6335386!3d45.412279299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDI0JzQ0LjIiTiA2wrAzOCcwMC43IkU!5e0!3m2!1sfr!2sfr!4v1681484207597!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>

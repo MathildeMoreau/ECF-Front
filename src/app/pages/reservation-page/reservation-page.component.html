@@ -1,27 +1,34 @@
 <app-header></app-header>
 <h2>Reserver une table</h2>
-<form (ngSubmit)="onSubmit()" #reservationForm="ngForm">
+<form #reservationForm="ngForm" (ngSubmit)="createReservation(reservationForm.value)">
   <div class="nb-personnes">
     <h3>Nombre de couverts</h3>
-    <input type="number" min="1" max="6" [defaultValue]="1" [(ngModel)]="reservation.nb_couverts" id="nb_couverts" name="nb_couverts" #nb_couverts="ngModel">
+    <input type="number" min="1" max="6"  name="nbCouverts" [(ngModel)]="nbCouverts">
     <p>(Maximum 6 personnes, au dela nous contacter)</p>
   </div>
   <div class="date-container">
     <h3>Date et heure</h3>
-    <app-datepicker-inline-calendar-example></app-datepicker-inline-calendar-example>
+    <mat-form-field>
+      <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date & time" ngModel name="date">
+      
+      <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+
+      <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+      
+    </mat-form-field>
   </div>
   <div class="allergies">
     <h3>Allergies</h3>
-    <input type="text" placeholder="Indiquez ici les éventuelles allergies pour vous et vos convives">
+    <input type="text" placeholder="Indiquez ici les éventuelles allergies pour vous et vos convives" name="allergies" ngModel>
   </div>
   <div class="reservation-infos">
     <div>
       <h3>Nom </h3>
-      <input type="text" placeholder="Nom" [(ngModel)]="reservation.nom" id="nom" name="nom" #nom="ngModel">
+      <input type="text" placeholder="Nom" name="nom" ngModel>
     </div>
     <div>
       <h3>E-mail </h3>
-      <input type="email" placeholder="Adresse e-mail" required>
+      <input type="email" placeholder="Adresse e-mail" name="email" required ngModel>
     </div>
   </div>
   <button type="submit" class="validation-button">Valider la réservation</button>

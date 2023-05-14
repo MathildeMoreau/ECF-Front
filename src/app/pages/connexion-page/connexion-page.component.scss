@@ -4,13 +4,21 @@
   padding-top: 20px;
   background: $white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  p{
+    font-family: 'Raleway', sans-serif;
+    color: $text;
+  }
 
   form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2% 0;
 
     input{
       @include buttons;
@@ -37,5 +45,20 @@
       padding: 18px;
       width: 100%;
     }
+  }
+
+
+}
+
+.inscription{
+  p{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .inscription-button{
+    @include buttons;
+    padding: 18px;
+    width: 100%;
+    margin-top: 20px;
   }
 }

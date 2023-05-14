@@ -19,7 +19,6 @@ import { CartePageComponent } from './pages/carte-page/carte-page.component';
 import { CarteCategoriesComponent } from './components/carte-categories/carte-categories.component';
 import { ConnexionPageComponent } from './pages/connexion-page/connexion-page.component';
 import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
-import { DatepickerInlineCalendarExampleComponent } from './components/datepicker-inline-calendar-example/datepicker-inline-calendar-example.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
@@ -29,12 +28,20 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CarteElementComponent } from './components/carte-element/carte-element.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MenuElementComponent } from './components/menu-element/menu-element.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ReservationAcceptedComponent } from './pages/reservation-accepted/reservation-accepted.component';
-
+import {
+  NgxMatDatetimePickerModule,
+  NgxMatNativeDateModule,
+  NgxMatTimepickerModule
+} from '@angular-material-components/datetime-picker';
+import { AuthGuard } from './guard/auth.guard';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { InscriptionComponent } from './pages/creer-compte-page/inscription/inscription.component';
 
 @NgModule({
   declarations: [
@@ -53,12 +60,13 @@ import { ReservationAcceptedComponent } from './pages/reservation-accepted/reser
     CarteCategoriesComponent,
     ConnexionPageComponent,
     ReservationPageComponent,
-    DatepickerInlineCalendarExampleComponent,
     CarteElementComponent,
     MenuPageComponent,
     MenuElementComponent,
     ContactPageComponent,
-    ReservationAcceptedComponent
+    ReservationAcceptedComponent,
+    UserPageComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +82,11 @@ import { ReservationAcceptedComponent } from './pages/reservation-accepted/reser
     MatInputModule, 
     MatButtonModule,
     MatNativeDateModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule,
+    NgxMatDatetimePickerModule,
+    NgxMatNativeDateModule,
+    NgxMatTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

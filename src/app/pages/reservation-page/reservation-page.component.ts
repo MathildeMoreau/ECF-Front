@@ -9,29 +9,34 @@ import { ReservationService } from 'src/app/services/reservation.service';
   styleUrls: ['./reservation-page.component.scss']
 })
 export class ReservationPageComponent implements OnInit{
+  picker !: any;
+  nbCouverts !: number
 
-  horairesDispoList !: string[];
-  allReservations !: Reservation[];
-  @Input() reservation !: Reservation;
 
   constructor(
     private _reservationService : ReservationService,
-    private _router : Router
+    private _router : Router,
   ){
 
   }
 
   ngOnInit(): void {
-    this._reservationService.getReservations().subscribe(
-      resa => this.allReservations = resa
-    )
     // Creneaux horaires dispo à afficher selon la date
+    this.nbCouverts = 1;
 
   }
 
-  onSubmit(){
-    console.log('Form submit' + this.reservation);
-    this._router.navigate(['reservation', this.reservation.id]);
+  checkDate(){
+    console.log(this.picker);
+  }
+
+  createReservation(reservations : {nbCouverts: number, date: string, allergies: string, nom: string, email: string}){
+    this._reservationService.createReservation(reservations)
+      .subscribe((res) => {
+        console.log(res)
+    });
+    alert(`Réservation confirmée au nom de ${reservations.nom} !`);
+    this._router.navigate(['/reservation/confirmed'])
   }
 
 }

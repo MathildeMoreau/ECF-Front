@@ -1,4 +1,14 @@
-<div *ngIf="reservation">
-  Réservation acceptée
+<app-header></app-header>
+
+<div class="container-reservation">
+  <h3>Votre réservation est confirmée !</h3>
+
+  <p>En attendant de passer un merveilleux moment, n'hésitez pas à consulter notre carte</p>
+
+  <div class="button-container">
+    <a routerLink="/carte">Voir la carte</a>
+    <a routerLink="/menus">Voir les menus</a>
+  </div>
 </div>
-<div *ngIf="!reservation">Aucune réservation avec ce numéro !</div>
+
+<app-footer></app-footer>

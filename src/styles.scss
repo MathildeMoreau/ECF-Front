@@ -72,29 +72,6 @@ h2{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mat-calendar-body-selected{
-  background: $main;
-  color: $white !important;
-}
-
-.mat-calendar-body-cell{
-  width: 10%;
-  height: 10%;
-}
-.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-  background: #78001079;
-}
-
-.mat-calendar-body-cell{
-  width: 10% !important;
-  height: 10% !important;
-  padding: 20px 50px;
-  
-}
-
-.mat-calendar-body-cell-content{
-  border: 2px solid $main;
-  color: $main;
-  width: 10%;
-  border-radius: 10px !important;
+.mat-mdc-form-field{
+  margin: 0 10%;
 }

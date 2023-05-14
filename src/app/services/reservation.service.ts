@@ -25,8 +25,8 @@ export class ReservationService {
     )
   }
 
-  createReservation(nb_couverts: number, nom: string): Observable<any>{
-    return this._http.post('https://quai-antiques.studiomdev.fr/api/reservations', {nb_couverts, nom});
+  createReservation(reservation: {}): Observable<any>{
+    return this._http.post<Reservation>('https://quai-antiques.studiomdev.fr/api/reservations', reservation);
   }
 
   cancelReservation(id: number) : Observable<any>{

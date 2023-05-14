@@ -1,0 +1,27 @@
+@import '../../../styles.scss';
+
+.container-reservation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3{
+    text-align: center;
+    color: $main;
+    margin: 100px 0;
+    font-size: 35px;
+  }
+  
+  .button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    a{
+      @include buttons;
+      padding: 20px;
+    }
+  }
+
+}

@@ -8,6 +8,9 @@ import { ReservationPageComponent } from './pages/reservation-page/reservation-p
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ReservationAcceptedComponent } from './pages/reservation-accepted/reservation-accepted.component';
+import { AuthGuard } from './guard/auth.guard';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { InscriptionComponent } from './pages/creer-compte-page/inscription/inscription.component';
 
 const routes: Routes = [
   {
@@ -39,8 +42,17 @@ const routes: Routes = [
     component: ContactPageComponent
   },
   {
-    path: 'reservation/:id',
+    path: 'reservation/confirmed',
     component: ReservationAcceptedComponent
+  },
+  {
+    path: 'user',
+    component: UserPageComponent,
+    canActivate : [AuthGuard]
+  },
+  {
+    path: 'inscription',
+    component: InscriptionComponent
   },
   {
     path: '*',

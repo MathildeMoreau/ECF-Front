@@ -3,8 +3,8 @@ import { Time } from "@angular/common"
 export interface Reservation{
   id: number
   nom: string
-  nb_couverts: number
+  nbCouverts: number
   date: Date
-  heure: Time
-  client_id: number
+  email: string
+  allergies: string
 }
