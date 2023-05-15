@@ -15,7 +15,7 @@ export class EmployeService {
     return this._http.get<Employe[]>('https://quai-antiques.studiomdev.fr/api/clients.json');
   }
 
-  getEmployeByMail(email: string){
+  getEmployeByMail(email: any){
     return this._http.get<Employe>(`https://quai-antiques.studiomdev.fr/api/personnels.json?page=1&email=${email}`).pipe(
       tap(res => console.log(res))
     );

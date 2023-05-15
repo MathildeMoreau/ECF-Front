@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-user-page',
   templateUrl: './user-page.component.html',
   styleUrls: ['./user-page.component.scss']
 })
-export class UserPageComponent {
+export class UserPageComponent implements OnInit {
+  nom : any;
+  prenom !: string;
+  email !: string;
+
+  constructor(
+    private _authService: AuthService
+  ){
+
+  }
+
+  ngOnInit(): void {
+    this.nom = this._authService.getUserName();
+  }
+
 
 }

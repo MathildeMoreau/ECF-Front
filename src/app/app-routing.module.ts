@@ -48,7 +48,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserPageComponent,
-    canActivate : [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'inscription',

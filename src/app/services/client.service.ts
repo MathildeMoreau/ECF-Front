@@ -23,6 +23,12 @@ export class ClientService {
     )
   }
 
+  getClientByMail(email: any): Observable<Client>{
+    return this._http.get<Client>(`https://quai-antiques.studiomdev.fr/api/clients.json?page=1&email=${email}`).pipe(
+      tap(res => console.log(res))
+    );
+  }
+
 
   AddClient(client : {}): Observable<any>{
     return this._http.post<Client>('https://quai-antiques.studiomdev.fr/api/clients', client);

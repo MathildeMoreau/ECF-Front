@@ -8,7 +8,6 @@ import { Employe } from '../models/Employe';
 })
 export class AuthService implements OnInit {
 
-  isLoggedIn: boolean = false;
   redirectUrl !: string; 
   employe !: Employe ;
 
@@ -21,18 +20,23 @@ export class AuthService implements OnInit {
     
   }
 
-  login(mail: string, password: string): Observable<boolean>{
-    this._employeService.getEmployeByMail(mail).subscribe(
-      (emp) => this.employe = emp
-    );
-    const isLoggedIn = true;
-    return of(isLoggedIn).pipe(
-      delay(1000),
-      tap(isLoggedIn => this.isLoggedIn = isLoggedIn)
-      )
+  isLoggedIn(){
+    return sessionStorage.getItem('email') != null;
   }
 
-  logout(){
-    this.isLoggedIn = false;
+  isAdmin(){
+    return sessionStorage.getItem('admin') != null;
+  }
+
+  getUserEmail(){
+    return sessionStorage.getItem('email') != null ? sessionStorage.getItem('email')?.toString() : '';
+  }
+
+  getUserName(){
+    return sessionStorage.getItem('nom') != null ? sessionStorage.getItem('nom')?.toString() : '';
+  }
+
+  getUserNbConvives(){
+    return sessionStorage.getItem('nb_convives') != null ? sessionStorage.getItem('nb_convives') : 1;
   }
 }

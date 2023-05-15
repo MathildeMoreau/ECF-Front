@@ -1,15 +1,13 @@
 <app-header></app-header>
 <div class="container">
-  <p>{{message}}</p>
-  <form #connexionForm="ngForm" action="">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="mail">
-      <input type="email" placeholder="EMAIL" name="email" ngModel>
+      <input type="email" placeholder="EMAIL" formControlName="email">
     </div>
     <div class="password">
-      <input type="password" placeholder="MOT DE PASSE" name="password" ngModel>
+      <input type="password" placeholder="MOT DE PASSE" formControlName="password">
     </div>
-    <button class="connexion-button" *ngIf="!auth.isLoggedIn" (click)="login(connexionForm.value)">Se connecter</button>
-    <button class="connexion-button" *ngIf="auth.isLoggedIn" (click)="logout()">Se déconnecter</button>
+    <button class="connexion-button">Se connecter</button>
   </form>
 
   <div class="inscription">
