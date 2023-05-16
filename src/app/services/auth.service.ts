@@ -39,4 +39,8 @@ export class AuthService implements OnInit {
   getUserNbConvives(){
     return sessionStorage.getItem('nb_convives') != null ? sessionStorage.getItem('nb_convives') : 1;
   }
+
+  getUserId(){
+    return sessionStorage.getItem('id') != null ? sessionStorage.getItem('id') : 0;
+  }
 }

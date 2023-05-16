@@ -46,7 +46,7 @@ const routes: Routes = [
     component: ReservationAcceptedComponent
   },
   {
-    path: 'user',
+    path: 'user/:id',
     component: UserPageComponent,
     canActivate: [AuthGuard]
   },

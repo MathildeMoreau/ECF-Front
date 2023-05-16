@@ -13,7 +13,7 @@ export class CarteElementComponent implements OnInit{
 
   platsList !: Plat[];
   PlatByCategorie !: Plat;
-  @Input() apiPathToDish !: string;
+  @Input() item : any = '';
 
   constructor(
     private _platService: PlatService
@@ -22,12 +22,9 @@ export class CarteElementComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this._platService.getPlats()
-    .subscribe(plat => this.platsList = plat)
-    console.log(this.apiPathToDish);
-
-    this._platService.getPlatById(this.apiPathToDish)
-      .subscribe(plat => this.PlatByCategorie = plat)
+    this._platService.getPlatsByCategorie(this.item).subscribe(
+      plat => this.platsList = plat
+    )
   }
 
 

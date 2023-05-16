@@ -30,6 +30,12 @@ export class PlatService {
     )
   }
 
+  getPlatsByCategorie(categorie: any):Observable<Plat[]>{
+    return this._http.get<Plat[]>(`https://quai-antiques.studiomdev.fr/api/plats.json?page=1&categorie=${categorie}`).pipe(
+      tap(res => console.log(res))
+    );
+  }
+
   getPlatById(platId: string): Observable<Plat>{
     return this._http.get<Plat>(`https://quai-antiques.studiomdev.fr${platId}`).pipe(
       tap(res => console.log(res))

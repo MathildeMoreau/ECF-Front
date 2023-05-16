@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 import { Categorie } from 'src/app/models/Categorie';
 import { Plat } from 'src/app/models/Plat';
 import { CategorieService } from 'src/app/services/categorie.service';
@@ -13,7 +14,7 @@ import { PlatService } from 'src/app/services/plat.service';
 export class CartePageComponent implements OnInit{
   categoriesList !: Categorie[];
   platsList !: Plat[];
-  apiPathToDish !: any;
+  categorieId !: number;
 
   constructor(
     private _categorieService: CategorieService,
@@ -24,11 +25,16 @@ export class CartePageComponent implements OnInit{
   }
   ngOnInit(): void {
     this._categorieService.getCategories()
-      .subscribe(cat => this.categoriesList = cat)
-
-    this._platService.getPlats()
       .subscribe(
-        plat => this.platsList = plat)
+        cat => this.categoriesList = cat)
 
-    }
+      }
+      
+  getPlatsByCategorie(cat: number){
+    this._platService.getPlatsByCategorie(cat).subscribe(
+        plat => this.platsList = plat
+      )
+      console.log(this.platsList);
+  }
+  
 }

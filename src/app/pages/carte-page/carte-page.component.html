@@ -5,9 +5,7 @@
 <app-carte-categories></app-carte-categories>
 <div *ngFor="let category of categoriesList" class="carte-element-container">
   <h3>{{category.nom}}</h3>
-  <div *ngFor="let dish of category.plats">
-    <p>{{dish}}</p>
-  </div>
+  <app-carte-element [item]="category.id"></app-carte-element>
 </div>
 
 <app-footer></app-footer>

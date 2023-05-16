@@ -8,6 +8,11 @@
     justify-content: space-around;
     align-items: center;
 
+    span{
+      position: absolute;
+      left: 350px;
+    }
+
     .plat-elements{
       margin-left: 100px;
       display: flex;

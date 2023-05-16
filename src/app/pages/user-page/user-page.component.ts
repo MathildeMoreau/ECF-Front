@@ -10,6 +10,7 @@ export class UserPageComponent implements OnInit {
   nom : any;
   prenom !: string;
   email !: string;
+  isAdmin !: boolean;
 
   constructor(
     private _authService: AuthService
@@ -19,6 +20,7 @@ export class UserPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.nom = this._authService.getUserName();
+    this.isAdmin = this._authService.isAdmin();
   }
 
 

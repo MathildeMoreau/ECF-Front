@@ -23,10 +23,4 @@ export class CategorieService {
       tap(res => console.log(res))
     )
   }
-
-  getPlatsOfCategoryById(platId: string): Observable<Plat>{
-    return this._http.get<Plat>(`https://quai-antiques.studiomdev.fr/${platId}.json`).pipe(
-      tap(res => console.log(res))
-    )
-  }
 }

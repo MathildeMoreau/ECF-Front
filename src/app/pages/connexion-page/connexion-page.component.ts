@@ -39,6 +39,7 @@ export class ConnexionPageComponent implements OnInit{
           this.userData = res;
           if(this.userData[0].password === this.loginForm.value.password){
             sessionStorage.setItem('email', this.userData[0].email);
+            sessionStorage.setItem('id', this.userData[0].id);
             sessionStorage.setItem('nom', this.userData[0].nom);
             sessionStorage.setItem('prenom', this.userData[0].prenom);
             sessionStorage.setItem('admin', this.userData[0].admin);
@@ -52,10 +53,11 @@ export class ConnexionPageComponent implements OnInit{
           this.userData = res;
           if(this.userData[0].password === this.loginForm.value.password){
             sessionStorage.setItem('email', this.userData[0].email);
+            sessionStorage.setItem('id', this.userData[0].id);
             sessionStorage.setItem('nom', this.userData[0].nom);
             sessionStorage.setItem('prénom', this.userData[0].prenom);
             sessionStorage.setItem('nb_convives', this.userData[0].nb_convives);
-            this.router.navigate(['/user']);
+            this.router.navigate([`/user/${sessionStorage.getItem('id')}`]);
           } else {
             this._snackBar.open(`Identifiant ou mot de passe incorrect`, '🛑', {duration: 3000});
           }
