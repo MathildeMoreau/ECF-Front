@@ -9,4 +9,7 @@ export interface Plat{
   categorie : any
   isSpecialite : boolean
   isVegan : boolean
+  isMenu1: boolean
+  isMenu2: boolean
+  isMenu3: boolean
 }

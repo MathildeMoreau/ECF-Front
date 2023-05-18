@@ -42,6 +42,22 @@ export class PlatService {
     )
   }
 
+  getPlatsMenu1(): Observable<Plat[]>{
+    return this._http.get<any>(`https://quai-antiques.studiomdev.fr/api/plats.json?page=1&isMenu1=true`).pipe(
+      tap(res => console.log(res))
+    );
+  }
+  getPlatsMenu2(): Observable<Plat[]>{
+    return this._http.get<any>(`https://quai-antiques.studiomdev.fr/api/plats.json?page=1&isMenu2=true`).pipe(
+      tap(res => console.log(res))
+    );
+  }
+  getPlatsMenu3(): Observable<Plat[]>{
+    return this._http.get<any>(`https://quai-antiques.studiomdev.fr/api/plats.json?page=1&isMenu3=true`).pipe(
+      tap(res => console.log(res))
+    );
+  }
+
   postPlat(plat:any) :Observable<Plat>{
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(plat);

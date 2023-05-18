@@ -4,18 +4,7 @@
     <h4>{{menu.prix | currency:'EUR'}}</h4>
   </div>
 
-  <div class="menu-choices">
-    <h5>Entrée</h5>
-    <p>Description</p>
-    <div class="separator">
-      **********
-    </div>
-    <h5>Plat</h5>
-    <p>Description</p>
-    <div class="separator">
-      **********
-    </div>
-    <h5>Dessert</h5>
-    <p>Description</p>
+  <div class="menu-choices" >
+    <app-menu-individual [item]="menu.id" class="menu-container"></app-menu-individual>
   </div>
 </div>
