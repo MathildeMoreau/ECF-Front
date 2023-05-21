@@ -9,7 +9,8 @@
         {{isMenuOpened ? 'X' : 'Menu'}}
       </button>
       <a routerLink="/home" id="logo-quai-antiques" ngClass="logo-quai-antiques">Quai Antiques</a>
-      <a class="connexion-button" routerLink="/connexion">Se connecter</a>
+      <a class="connexion-button" routerLink="/connexion" *ngIf="compteId == ''">Se connecter</a>
+      <a class="connexion-button" [routerLink]="['/user', compteId]" *ngIf="compteId != ''">Mon compte</a>
     </div>
   </div>
 </div>

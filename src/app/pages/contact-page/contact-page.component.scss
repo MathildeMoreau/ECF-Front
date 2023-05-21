@@ -1,22 +1,27 @@
 @import '../../../styles.scss';
 
-h2{
-  color: $text;
-}
-
 .coordonnees{
   display: flex;
   justify-content: space-around;
+
+  @media all and (max-width: 840px){
+    flex-direction: column;
+  }
 
   form{
     display: flex;
     flex-direction: column;
 
+    @media all and (max-width: 840px){
+      justify-content: center;
+      align-items: center;
+    }
+
     input{
       border: 0;
       border-bottom: 1px solid $main;
-      margin: 20px;
-      padding: 20px 150px;
+      width: 40vw;
+      height: 50px;
       background: $white;
 
       &::placeholder{
@@ -27,12 +32,25 @@ h2{
         font-size: 20px;
         text-align: left;
       }
+
+      @media all and (max-width: 840px){
+        width: 90vw;
+      }
     }
 
     button{
       @include buttons;
       margin-top: 50px;
       padding: 20px 0;
+
+      @media all and (max-width: 840px){
+        padding: 20px;
+      }
+    }
+  }
+  iframe{
+    @media all and (max-width: 840px){
+    margin-top: 50px;
     }
   }
 }

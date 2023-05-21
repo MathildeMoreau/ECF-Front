@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Reservation } from 'src/app/models/Reservation';
 import { ReservationService } from 'src/app/services/reservation.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-reservation-page',
@@ -16,6 +17,7 @@ export class ReservationPageComponent implements OnInit{
   constructor(
     private _reservationService : ReservationService,
     private _router : Router,
+    private _snackBar: MatSnackBar
   ){
 
   }
@@ -35,7 +37,7 @@ export class ReservationPageComponent implements OnInit{
       .subscribe((res) => {
         console.log(res)
     });
-    alert(`Réservation confirmée au nom de ${reservations.nom} !`);
+    this._snackBar.open(`Réservation au nom de ${reservations.nom} confirmée`, 'Merci', {duration: 5000});
     this._router.navigate(['/reservation/confirmed'])
   }
 

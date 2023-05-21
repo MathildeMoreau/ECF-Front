@@ -1,9 +1,5 @@
 @import '../../../styles.scss';
 
-h2{
-  @include itemsText;
-}
-
 form{
   display: flex;
   flex-direction: column;
@@ -34,6 +30,11 @@ form{
       font-weight: 200;
       font-size: 20px;
       font-style: italic;
+
+      @media all and (max-width: 840px){
+        text-align: center;
+        font-size: 13px;
+      }
     }
   }
 
@@ -60,6 +61,11 @@ form{
       border: $main solid 1px;
       border-radius: 10px;
       background: $white;
+
+      @media all and (max-width: 840px){
+        width: 90vw;
+        font-size: 13px;
+      }
     }
   }
 
@@ -77,6 +83,15 @@ form{
       background: $white;
       font-size: 22px;
       text-align: center;
+
+      @media all and (max-width: 840px){
+        width: 90vw;
+      }
+    }
+
+    @media all and (max-width: 840px){
+      flex-direction: column;
+      width: 90vw;
     }
   }
 
