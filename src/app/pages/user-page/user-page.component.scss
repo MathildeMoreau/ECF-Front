@@ -1,3 +1,51 @@
-h1{
-  color: black;
+@import '../../../styles.scss';
+
+.user-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+h3{
+  color: $main;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+.reservations{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  table{
+    width: 90%;
+
+    thead{
+      tr{
+        th{
+          font-family: 'Raleway', sans-serif;
+        }
+
+      }
+    }
+
+    tbody{
+      text-align: center;
+      tr{
+        td{
+          font-family: 'Raleway', sans-serif;
+        }
+      }
+    }
+  }
+
+}
+
+.deconnexion{
+  @include buttons;
+  padding: 20px;
+  margin-top: 50px;
+}
 }

@@ -43,6 +43,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { InscriptionComponent } from './pages/creer-compte-page/inscription/inscription.component';
 import { MenuIndividualComponent } from './components/menu-individual/menu-individual.component';
+import { HeaderBlackComponent } from './components/header-black/header-black.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { MenuIndividualComponent } from './components/menu-individual/menu-indiv
     ReservationAcceptedComponent,
     UserPageComponent,
     InscriptionComponent,
-    MenuIndividualComponent
+    MenuIndividualComponent,
+    HeaderBlackComponent
   ],
   imports: [
     BrowserModule,

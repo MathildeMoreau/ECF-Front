@@ -55,7 +55,7 @@ export class ConnexionPageComponent implements OnInit{
             sessionStorage.setItem('email', this.userData[0].email);
             sessionStorage.setItem('id', this.userData[0].id);
             sessionStorage.setItem('nom', this.userData[0].nom);
-            sessionStorage.setItem('prénom', this.userData[0].prenom);
+            sessionStorage.setItem('prenom', this.userData[0].prenom);
             sessionStorage.setItem('nb_convives', this.userData[0].nb_convives);
             this.router.navigate([`/user/${sessionStorage.getItem('id')}`]);
           } else {

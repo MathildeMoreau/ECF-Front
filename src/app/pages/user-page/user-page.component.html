@@ -1,7 +1,41 @@
-<app-header></app-header>
-<h1>Hello {{nom}}</h1>
+<app-header-black></app-header-black>
+<h2>Bienvenue {{prenom}}</h2>
+
+<div class="user-container">
+<div class="allergies">
+  <h3>Mes allergies</h3>
+  <div *ngFor="let resa of reservations">
+    <p>{{resa.allergies}}</p>
+  </div>
+
+</div>
+
+<div class="reservations">
+  <h3>Mes réservations</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Nombre de couverts</th>
+        <th>Nom de la réservation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resa of reservations">
+        <td>{{resa.date | date:'dd/MM/YYYY'}}</td>
+        <td>{{resa.date | slice:11:16}}</td>
+        <td>{{resa.nb_couverts}}</td>
+        <td>{{resa.nom}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div *ngIf="isAdmin">
   <a href="https://quai-antiques.studiomdev.fr/admin">Accéder au dashboard admin</a>
+</div>
+
+<button class="deconnexion" (click)="deconnexion()">Se déconnecter</button>
 </div>
 <app-footer></app-footer>

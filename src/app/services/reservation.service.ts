@@ -25,6 +25,12 @@ export class ReservationService {
     )
   }
 
+  getReservationByEmail(email: any): Observable<any>{
+    return this._http.get<any>(`https://quai-antiques.studiomdev.fr/api/reservations.json?page=1&email=${email}`).pipe(
+      tap(res => console.log(res))
+    )
+  }
+
   createReservation(reservation: {}): Observable<any>{
     return this._http.post<Reservation>('https://quai-antiques.studiomdev.fr/api/reservations', reservation);
   }

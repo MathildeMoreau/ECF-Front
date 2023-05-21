@@ -6,6 +6,12 @@
   flex-direction: column;
   color: $white;
 
+  @media all and (max-width: 840px){
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   a {
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -21,6 +27,10 @@
 
     &:hover{
       font-weight: 500;
+    }
+
+    @media all and (max-width: 840px){
+      padding: 10px;
     }
   }
 }

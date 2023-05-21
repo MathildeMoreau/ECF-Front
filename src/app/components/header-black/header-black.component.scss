@@ -37,19 +37,17 @@
       font-size: 50px;
       z-index: 50;
       letter-spacing: 10px;
-      color: $white;
+      color: $text;
       text-decoration: none;
 
       &:visited{
         text-decoration: none;
-        color: $white;
+        color: $text;
       }
 
       @media all and (max-width: 840px){
         text-align: center;
-        margin-top: 100px;
       }
-      
     }
 
     .toggleMenu{
@@ -57,7 +55,7 @@
       background: none;
       display: flex;
       align-items: center;
-      color: $white;
+      color: $text;
       
       .menu-hamburger-image{
         width: 40px;
@@ -74,10 +72,6 @@
       &:visited{
         text-decoration: none;
         color: $white;
-      }
-
-      @media all and (max-width: 840px){
-        margin-top: 100px;
       }
     }
     

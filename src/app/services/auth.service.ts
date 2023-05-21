@@ -36,6 +36,10 @@ export class AuthService implements OnInit {
     return sessionStorage.getItem('nom') != null ? sessionStorage.getItem('nom')?.toString() : '';
   }
 
+  getUserFirstName(){
+    return sessionStorage.getItem('prenom') != null ? sessionStorage.getItem('prenom')?.toString() : '';
+  }
+
   getUserNbConvives(){
     return sessionStorage.getItem('nb_convives') != null ? sessionStorage.getItem('nb_convives') : 1;
   }
