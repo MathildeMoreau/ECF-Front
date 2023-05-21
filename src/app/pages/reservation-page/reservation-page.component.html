@@ -24,11 +24,11 @@
   <div class="reservation-infos">
     <div>
       <h3>Nom </h3>
-      <input type="text" placeholder="Nom" name="nom" ngModel>
+      <input type="text" placeholder="Nom" name="nom" [ngModel]="nomSession">
     </div>
     <div>
       <h3>E-mail </h3>
-      <input type="email" placeholder="Adresse e-mail" name="email" required ngModel>
+      <input type="email" placeholder="Adresse e-mail" name="email" required [ngModel]="emailSession">
     </div>
   </div>
   <button type="submit" class="validation-button">Valider la réservation</button>

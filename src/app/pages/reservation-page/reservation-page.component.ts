@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Reservation } from 'src/app/models/Reservation';
 import { ReservationService } from 'src/app/services/reservation.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-reservation-page',
@@ -12,12 +13,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ReservationPageComponent implements OnInit{
   picker !: any;
   nbCouverts !: number
+  nomSession : any;
+  emailSession : any;
 
 
   constructor(
     private _reservationService : ReservationService,
     private _router : Router,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private _authService : AuthService
   ){
 
   }
@@ -25,6 +29,8 @@ export class ReservationPageComponent implements OnInit{
   ngOnInit(): void {
     // Creneaux horaires dispo à afficher selon la date
     this.nbCouverts = 1;
+    this.nomSession = this._authService.getUserName();
+    this.emailSession = this._authService.getUserEmail();
 
   }
 

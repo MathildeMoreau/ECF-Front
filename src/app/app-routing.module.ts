@@ -56,13 +56,13 @@ const routes: Routes = [
     component: HomepageComponent
   },
   {
-    path: '**',
-    component: Page404Component
-  },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: Page404Component
   }
 ];
 
