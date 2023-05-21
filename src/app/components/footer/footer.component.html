@@ -1,6 +1,6 @@
 <div class="footer-container">
   <div class="border-1">
-    <div class="border-2">
+    <div class="border-2" *ngFor="let info of infos">
       <div class="footer-title">
         <h4>Quai Antiques</h4>
         <div class="sem-hours">
@@ -8,15 +8,11 @@
           <p>Fermé</p>
         </div>
         <div class="sem-hours">
-          <p>Du mardi au samedi :</p>
+          <p>Du mardi au dimanche :</p>
           <div class="individual-hours">
-            <p>12h00-15h00</p>
-            <p>18h30-23h00</p>
+            <p>{{info.ouv_midi}}-{{info.ferm_midi}}</p>
+            <p>{{info.ouv_soir}}-{{info.ferm_soir}}</p>
           </div>
-        </div>
-        <div class="sem-hours">
-          <p>Dimanche : </p>
-          <p>12h00-16h00</p>
         </div>
       </div>
       <div class="footer-menu">

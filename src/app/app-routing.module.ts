@@ -18,10 +18,6 @@ const routes: Routes = [
     component: HomepageComponent
   },
   {
-    path:'admin',
-    component: AdminPageComponent
-  },
-  {
     path: 'carte',
     component: CartePageComponent
   },

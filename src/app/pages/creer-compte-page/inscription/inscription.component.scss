@@ -7,18 +7,18 @@ form{
   align-items: center;
 
   .element-container{
-    width: 30%;
+    width: 20vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
 
+    @media all and (max-width: 840px){
+      width: 90vw;
+    }
+
     label{
       font-family: 'Raleway', sans-serif;
-    }
-    input{
-      width: 200px;
-      height: 30px;
     }
   }
 
