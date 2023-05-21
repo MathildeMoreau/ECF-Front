@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+
+.error-container{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  p{
+    text-align: center;
+  }
+  
+  a{
+    @include buttons;
+    padding: 20px;
+  }
+}

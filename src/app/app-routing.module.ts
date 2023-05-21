@@ -11,6 +11,7 @@ import { ReservationAcceptedComponent } from './pages/reservation-accepted/reser
 import { AuthGuard } from './guard/auth.guard';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { InscriptionComponent } from './pages/creer-compte-page/inscription/inscription.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: '*',
     component: HomepageComponent
+  },
+  {
+    path: '**',
+    component: Page404Component
   },
   {
     path: '',

@@ -44,6 +44,7 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { InscriptionComponent } from './pages/creer-compte-page/inscription/inscription.component';
 import { MenuIndividualComponent } from './components/menu-individual/menu-individual.component';
 import { HeaderBlackComponent } from './components/header-black/header-black.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { HeaderBlackComponent } from './components/header-black/header-black.com
     UserPageComponent,
     InscriptionComponent,
     MenuIndividualComponent,
-    HeaderBlackComponent
+    HeaderBlackComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
