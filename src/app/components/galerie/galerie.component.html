@@ -2,14 +2,14 @@
 
 <div class="galerie-container">
   <div class="galerie-first-rank">
-    <div class="plates" [style.background-image]="'url(quai-antiques/public/upload/images/' + result.photo + ')'" *ngFor="let result of platsList | slice:0:3">
+    <div class="plates" [style.background-image]="'url(https://quai-antiques.studiomdev.fr/public/upload/images/plats/' + result.photo + ')'" *ngFor="let result of platsList | slice:0:3">
       <div class="middle">
         {{result.titre_photo}}
       </div>
     </div>
   </div>
   <div class="galerie-second-rank">
-    <div class="plates" [style.background-image]="'url(quai-antiques/public/upload/images/' + result.photo + ')'" *ngFor="let result of platsList | slice:3:6">
+    <div class="plates" [style.background-image]="'url(https://quai-antiques.studiomdev.fr/public/upload/images/plats/' + result.photo + ')'" *ngFor="let result of platsList | slice:3:6">
       <div class="middle">
         {{result.titre_photo}}
       </div>

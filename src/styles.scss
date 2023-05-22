@@ -25,6 +25,11 @@ $main: #780010;
   width: 430px;
   height: 370px;
   margin: 10px;
+
+  @media all and (max-width: 840px){
+    width: 380px;
+    height: 340px;
+  }
 }
 
 @mixin itemsText{

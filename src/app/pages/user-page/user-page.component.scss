@@ -20,7 +20,7 @@ h3{
   align-items: center;
 
   table{
-    width: 90%;
+    width: 70vw;
 
     thead{
       tr{
@@ -41,6 +41,14 @@ h3{
     }
   }
 
+  margin-bottom: 50px;
+
+}
+
+.dashboard-button{
+  @include buttons;
+  padding: 20px;
+  margin-top: 50px;
 }
 
 .deconnexion{

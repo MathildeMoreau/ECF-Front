@@ -11,11 +11,13 @@ export class EmployeService {
 
   constructor(private _http:HttpClient) { }
 
-  getEmployees(){
-    return this._http.get<Employe[]>('https://quai-antiques.studiomdev.fr/api/clients.json');
+  getEmployees(): Observable<Employe[]>{
+    return this._http.get<Employe[]>('https://quai-antiques.studiomdev.fr/api/clients.json').pipe(
+      tap(res => console.log(res))
+    );
   }
 
-  getEmployeByMail(email: any){
+  getEmployeByMail(email: any): Observable<Employe>{
     return this._http.get<Employe>(`https://quai-antiques.studiomdev.fr/api/personnels.json?page=1&email=${email}`).pipe(
       tap(res => console.log(res))
     );

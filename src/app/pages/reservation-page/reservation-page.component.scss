@@ -43,6 +43,27 @@ form{
     flex-direction: column;
     width: 100%;
     margin-top: 50px;
+
+    .date-heure{
+      display: flex;
+      justify-content: center;
+
+      input{
+      border: $main solid 1px;
+      border-radius: 10px;
+      width: 200px;
+      height: 40px;
+      color: $main;
+      font-size: 22px;
+      text-align: center;
+      margin: 0 50px;
+
+      @media all and (max-width: 840px){
+        text-align: center;
+        font-size: 13px;
+      }
+      }
+    }
     
   }
 

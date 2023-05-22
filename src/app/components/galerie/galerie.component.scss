@@ -22,6 +22,10 @@
     justify-content: space-evenly;
     padding-bottom: 10px;
 
+    @media all and (max-width: 840px){
+      flex-direction: column;
+    }
+
     .plates{
       @include images;
       position: relative;
@@ -43,6 +47,10 @@
       .galerie-second-rank{
         display: flex;
         justify-content: space-evenly;
+
+        @media all and (max-width: 840px){
+          flex-direction: column;
+        }
 
         .plates{
           background: url(/assets/huitres.jpg);

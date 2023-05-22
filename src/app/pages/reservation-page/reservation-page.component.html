@@ -8,14 +8,11 @@
   </div>
   <div class="date-container">
     <h3>Date et heure</h3>
-    <mat-form-field>
-      <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date & time" ngModel name="date">
-      
-      <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+    <div class="date-heure">
+      <input type="date" ngModel name="date" required>
+      <input type="time" ngModel name="heure">
+    </div>
 
-      <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
-      
-    </mat-form-field>
   </div>
   <div class="allergies">
     <h3>Allergies</h3>

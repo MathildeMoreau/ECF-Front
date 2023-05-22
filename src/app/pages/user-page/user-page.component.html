@@ -24,7 +24,7 @@
     <tbody>
       <tr *ngFor="let resa of reservations">
         <td>{{resa.date | date:'dd/MM/YYYY'}}</td>
-        <td>{{resa.date | slice:11:16}}</td>
+        <td>{{resa.heure | slice:11:16}}</td>
         <td>{{resa.nb_couverts}}</td>
         <td>{{resa.nom}}</td>
       </tr>
@@ -33,7 +33,7 @@
 </div>
 
 <div *ngIf="isAdmin">
-  <a href="https://quai-antiques.studiomdev.fr/admin">Accéder au dashboard admin</a>
+  <a href="https://quai-antiques.studiomdev.fr/admin" class="dashboard-button">Accéder au dashboard admin</a>
 </div>
 
 <button class="deconnexion" (click)="deconnexion()">Se déconnecter</button>

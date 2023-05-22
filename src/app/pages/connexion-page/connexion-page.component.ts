@@ -25,6 +25,7 @@ export class ConnexionPageComponent implements OnInit{
   }
   ngOnInit(): void {
     sessionStorage.clear();
+    console.log(this.loginForm.value);
 
   }
 
@@ -37,13 +38,15 @@ export class ConnexionPageComponent implements OnInit{
       this.employeService.getEmployeByMail(this.loginForm.value.email).subscribe(
         res => {
           this.userData = res;
+          console.log(this.loginForm.value.email);
+          console.log(this.userData);
           if(this.userData[0].password === this.loginForm.value.password){
             sessionStorage.setItem('email', this.userData[0].email);
             sessionStorage.setItem('id', this.userData[0].id);
             sessionStorage.setItem('nom', this.userData[0].nom);
             sessionStorage.setItem('prenom', this.userData[0].prenom);
             sessionStorage.setItem('admin', this.userData[0].admin);
-            this.router.navigate(['/user']);
+            this.router.navigate([`/personnel/${sessionStorage.getItem('id')}`]);
           } else {
             this._snackBar.open(`Identifiant ou mot de passe incorrect`, '🛑', {duration: 3000});
           }
@@ -63,6 +66,8 @@ export class ConnexionPageComponent implements OnInit{
           }
         }
       )
+    } else {
+      this._snackBar.open(`Identifiant ou mot de passe incorrect`, '🛑', {duration: 3000});
     }
   }
 

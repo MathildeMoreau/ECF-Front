@@ -48,6 +48,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'personnel/:id',
+    component: UserPageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'inscription',
     component: InscriptionComponent
   },
@@ -59,10 +64,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
-  {
-    path: '**',
-    component: Page404Component
   }
 ];
 

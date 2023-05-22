@@ -38,7 +38,7 @@ export class ReservationPageComponent implements OnInit{
     console.log(this.picker);
   }
 
-  createReservation(reservations : {nbCouverts: number, date: string, allergies: string, nom: string, email: string}){
+  createReservation(reservations : {nbCouverts: number, date: Date, heure: string, allergies: string, nom: string, email: string}){
     this._reservationService.createReservation(reservations)
       .subscribe((res) => {
         console.log(res)
